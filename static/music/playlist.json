@@ -2,32 +2,38 @@
   {
     "name": "富士山下",
     "artist": "陈奕迅",
-    "url": "/music/song01.mp3"
+    "url": "/music/song01.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "美人鱼",
     "artist": "林俊杰",
-    "url": "/music/song02.mp3"
+    "url": "/music/song02.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "葡萄成熟时",
     "artist": "陈奕迅",
-    "url": "/music/song03.mp3"
+    "url": "/music/song03.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "使一颗心免于哀伤（哼唱版）",
     "artist": "HOYO-MiX",
-    "url": "/music/song04.mp3"
+    "url": "/music/song04.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "使一颗心免于哀伤",
     "artist": "HOYO-MiX",
-    "url": "/music/song05.mp3"
+    "url": "/music/song05.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "童话",
     "artist": "光良",
-    "url": "/music/song06.mp3"
+    "url": "/music/song06.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "希望有羽毛和翅膀",
@@ -45,16 +51,19 @@
   {
     "name": "雨爱",
     "artist": "杨丞琳",
-    "url": "/music/song09.mp3"
+    "url": "/music/song09.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "最佳损友",
     "artist": "陈奕迅",
-    "url": "/music/song10.mp3"
+    "url": "/music/song10.mp3",
+    "cover": "/music/song07.webp"
   },
   {
     "name": "The Truth That You Leave",
     "artist": "Pianoboy",
-    "url": "/music/song11.mp3"
+    "url": "/music/song11.mp3",
+    "cover": "/music/song07.webp"
   }
 ]
