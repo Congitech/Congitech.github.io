@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "scale": 1.0,
+  "scale": 0.5,
   "rules": [
     {
       "name": "tuantuanma-pointer",
@@ -317,120 +317,120 @@
       "keyframes": [
         {
           "file": "beam/00.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             0.0
           ]
         },
         {
           "file": "beam/01.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             6.6667
           ]
         },
         {
           "file": "beam/02.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             13.3333
           ]
         },
         {
           "file": "beam/03.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             20.0
           ]
         },
         {
           "file": "beam/04.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             26.6667
           ]
         },
         {
           "file": "beam/05.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             33.3333
           ]
         },
         {
           "file": "beam/06.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             40.0
           ]
         },
         {
           "file": "beam/07.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             46.6667
           ]
         },
         {
           "file": "beam/08.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             53.3333
           ]
         },
         {
           "file": "beam/09.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             60.0
           ]
         },
         {
           "file": "beam/10.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             66.6667
           ]
         },
         {
           "file": "beam/11.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             73.3333
           ]
         },
         {
           "file": "beam/12.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             80.0
           ]
         },
         {
           "file": "beam/13.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             86.6667
           ]
         },
         {
           "file": "beam/14.webp",
-          "x": 5,
-          "y": 8,
+          "x": 2,
+          "y": 4,
           "percents": [
             93.3333
           ]
@@ -656,48 +656,48 @@
       "keyframes": [
         {
           "file": "move/00.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             0.0
           ]
         },
         {
           "file": "move/01.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             16.6667
           ]
         },
         {
           "file": "move/02.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             33.3333
           ]
         },
         {
           "file": "move/03.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             50.0
           ]
         },
         {
           "file": "move/04.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             66.6667
           ]
         },
         {
           "file": "move/05.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             83.3333
           ]
@@ -713,48 +713,48 @@
       "keyframes": [
         {
           "file": "ns/00.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             0.0
           ]
         },
         {
           "file": "ns/01.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             16.6667
           ]
         },
         {
           "file": "ns/02.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             33.3333
           ]
         },
         {
           "file": "ns/03.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             50.0
           ]
         },
         {
           "file": "ns/04.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             66.6667
           ]
         },
         {
           "file": "ns/05.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             83.3333
           ]
@@ -770,48 +770,48 @@
       "keyframes": [
         {
           "file": "we/00.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             0.0
           ]
         },
         {
           "file": "we/01.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             16.6667
           ]
         },
         {
           "file": "we/02.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             33.3333
           ]
         },
         {
           "file": "we/03.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             50.0
           ]
         },
         {
           "file": "we/04.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             66.6667
           ]
         },
         {
           "file": "we/05.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             83.3333
           ]
@@ -827,48 +827,48 @@
       "keyframes": [
         {
           "file": "nwse/00.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             0.0
           ]
         },
         {
           "file": "nwse/01.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             16.6667
           ]
         },
         {
           "file": "nwse/02.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             33.3333
           ]
         },
         {
           "file": "nwse/03.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             50.0
           ]
         },
         {
           "file": "nwse/04.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             66.6667
           ]
         },
         {
           "file": "nwse/05.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             83.3333
           ]
@@ -884,48 +884,48 @@
       "keyframes": [
         {
           "file": "nesw/00.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             0.0
           ]
         },
         {
           "file": "nesw/01.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             16.6667
           ]
         },
         {
           "file": "nesw/02.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             33.3333
           ]
         },
         {
           "file": "nesw/03.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             50.0
           ]
         },
         {
           "file": "nesw/04.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             66.6667
           ]
         },
         {
           "file": "nesw/05.webp",
-          "x": 23,
-          "y": 23,
+          "x": 12,
+          "y": 12,
           "percents": [
             83.3333
           ]
@@ -1038,16 +1038,16 @@
       "keyframes": [
         {
           "file": "cross/00.webp",
-          "x": 9,
-          "y": 9,
+          "x": 4,
+          "y": 4,
           "percents": [
             0.0
           ]
         },
         {
           "file": "cross/01.webp",
-          "x": 9,
-          "y": 9,
+          "x": 4,
+          "y": 4,
           "percents": [
             50.0
           ]
