@@ -1,0 +1,11 @@
+/public/
+/resources/_gen/
+.hugo_build.lock
+node_modules/
+.DS_Store
+Thumbs.db
+/content/.obsidian
+/data/links_rss.json
+/data/bangumi.json
+
+*.bak

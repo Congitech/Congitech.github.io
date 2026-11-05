@@ -1,0 +1,490 @@
+ # 配置索引：
+#   [params]           站点参数总入口
+#   params.post        文章正文字号
+#   params.links       友链页
+#   params.moments     动态页
+#   params.bangumi     追番页（Bilibili）
+#   params.loader      全站加载动画
+#   params.author      作者信息
+#   params.hero        首页 Hero
+#   params.footer      页脚
+#   params.home        首页布局
+#   params.notice      公告栏
+#   params.social      社交图标
+#   params.charts      归档/标签图表
+#   params.sponsor     赞助
+#   params.license     版权声明
+#   params.comment     评论 provider
+#   params.waline      Waline（备用）
+#   params.twikoo      Twikoo（当前）
+#   params.envelope    留言页信封
+#   params.navbar      顶栏
+#   params.search      全文搜索
+#   params.menu.main   导航菜单
+#   params.music       音乐播放器
+#   params.live2d      Live2D 看板娘
+#   params.mouse        团团猫动态鼠标指针
+#   params.effects      全站背景特效（樱花/雨/雪等）
+#   params.pjax        无刷新跳转
+# =============================================================================
+
+# 站点正式访问地址（影响 sitemap、RSS、分享链接等绝对 URL，部署前务必与真实域名一致）
+baseURL = 'https://congitech.github.io/'
+locale = 'zh-cn'
+defaultContentLanguage = 'zh'
+title = 'QuinC'          # 站点名称（浏览器标题、页脚版权等）
+theme = 'aiovtue'           # 主题目录：themes/aiovtue/
+hasCJKLanguage = true      # 启用中文分词（搜索、摘要等）
+enableRobotsTXT = true     # 生成 robots.txt（模板在 themes/aiovtue/layouts/robots.txt）
+
+# --- 站点地图（sitemap.xml）---
+[sitemap]
+  changefreq = 'weekly'    # 更新频率提示
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+# --- 分页（首页文章列表）---
+[pagination]
+  pagerSize = 10           # 每页文章数
+
+# --- 分类与标签 URL 路径 ---
+[taxonomies]
+  category = 'categories'  # /categories/xxx/
+  tag = 'tags'             # /tags/xxx/
+
+# --- 输出格式（首页与文章栏目额外生成 RSS）---
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+# --- Markdown 渲染 ---
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true        # 允许正文内嵌 HTML
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true      # 保留 LaTeX 分隔符，由 passthrough render hook + KaTeX 构建时渲染
+        # 块级公式 $$ 结束后若紧跟 --- 分隔线，中间必须空一行，否则 Goldmark 会误解析为标题
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    style = "github"       # 代码高亮主题
+    noClasses = false
+    lineNos = false
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2         # 目录从 h2 开始
+    endLevel = 4           # 目录至 h4，不显示 h5/h6
+    ordered = false
+
+# --- 资源类型：将 .excalidraw 识别为 JSON page bundle 资源 ---
+[mediaTypes]
+  [mediaTypes."application/json"]
+    suffixes = ["json", "excalidraw"]
+
+# =============================================================================
+# 站点参数（主题通过 .Site.Params 读取）
+# =============================================================================
+[params]
+  subtitle = 'QuinC'                              # 副标题（首页标题后缀）
+  description = '技术宅拯救世界'                  # 站点默认描述（SEO、分享卡片）
+  primaryColor = '#DF9193'                     # 主题主色
+  favicon = '/favicon-quinc.png'
+  defaultCover = '/hero/bg-10-dp.jpg'               # 文章默认头图（无 cover 时使用）
+  math = false                                 # 默认关闭；单篇 front matter 写 math: true 启用构建时 KaTeX 渲染
+  postIndent = true                            # 文章/关于页正文首行缩进 2em（单篇可写 indent: false 关闭）
+
+  # --- 文章/关于页正文 ---
+  [params.post]
+    fontSize = "1.1rem"                          # 正文字号（rem，如 0.95rem / 1.1rem）
+
+  # --- 友链页 ---
+  [params.links]
+    layout = 'preview'                        # preview：卡片截图 | simple：长条头像+悬停预览
+    rssEnable = false                        # 友链页「朋友动态」RSS 展示（关闭时不拉取 RSS）
+    footerEnable = false                      # 全站页脚友链列表展示
+
+  # --- 动态页（每条动态：content/moments/*.md，front matter 仅需 date）---
+  [params.moments]
+    layout = "memos"                          # memos：头像时间线 | cards：居中卡片
+    cardMaxWidth = "720px"                    # cards 模式下列表最大宽度
+
+  # --- 追番页（Bilibili 追番列表，构建时拉取 data/bangumi.json）---
+  [params.bangumi]
+    enable = true                             # 是否启用追番页与构建时数据拉取
+    vmid = '2036305433'                        # Bilibili 用户 UID（追番列表需空间公开）
+    quote = '生命不息，追番不止！'              # 页面引言
+
+  # --- Excalidraw 画板文章（content/excalidraw/<slug>/index.md + *.excalidraw）---
+  # 独立栏目，首页/归档/搜索与 posts 合并展示；单页为交互式只读查看器
+
+  # --- 全站加载动画（首页进入时的樱花加载页）---
+  [params.loader]
+    enable = true
+    minShow = 0            # 最短显示时间（毫秒）
+    maxDuration = 6000     # 最长等待时间（毫秒）
+
+  # --- 侧栏 / 关于页作者信息 ---
+  [params.author]
+    name = 'QuinC'
+    avatar = '/hero/wolf.jpg'
+    statusEmoji = '🌸'     # 头像角标
+    statusMessage = 'emoing...'
+
+  # --- 首页 Hero 大图 / 视频轮播 ---
+  # 媒体文件放在 static/hero/，此处写 URL 路径（以 / 开头）
+  
+  
+  
+  # grid 全站背景网格（仅 params.hero.style = 'grid' 时生效）
+  # size：单元格边长（px）；lineOpacity / lineOpacityDark：线条透明度 0~1，越大越深
+  [params.hero.grid]
+    size = 20
+    lineOpacity = 0.1
+    lineOpacityDark = 0.1
+
+  [params.hero]
+    title = 'QuinC'
+    # motto：关闭一言时显示的格言；字符串=固定一句，数组=每次随机一条（打字机效果同一言）
+    motto = [
+      '愿此行,终抵群星',
+      '山河远阔，人间烟火',
+      '愿你眼中有光，心中有爱',
+      '慢慢来，也比较快',
+      '记录本身就是意义',
+    ]
+    randomUrls = true      # 随机切换背景
+    enableHitokoto = true  # 一言 API 随机格言
+    typewriter = true      # 打字机效果
+    typewriterSpeed = 80
+    style = 'dot'          # 背景样式：dot / grid 等
+    fixedImg = true
+    playerUrl = '/hero/video.mp4'
+    urls = [
+      '/hero/bg-01-s1.jpg',
+      '/hero/bg-02-s2.jpg',
+      '/hero/bg-03-s3.jpg',
+      '/hero/bg-04-s4.jpg',
+      '/hero/bg-05-s5.jpg',
+      '/hero/bg-06-glm.jpg',
+      '/hero/bg-07-gpt.jpg',
+      '/hero/bg-08-gemini.jpg',
+      '/hero/bg-09-gork.jpg',
+      '/hero/bg-10-dp.jpg',
+      '/hero/bg-11-kimi.jpg',
+      '/hero/bg-12-qwen.jpg',
+      '/hero/bg-13-claude.jpg',
+    ]
+
+  # --- 页脚 ---
+  [params.footer]
+    since = 2026           # 版权起始年
+    runtimeSince = '2026-08-29'   # 站点运行倒计时起点（YYYY-MM-DD）
+    icp = ''
+
+# --- 首页公告栏（右侧域名列表）---
+  # --- 首页文章列表布局 ---
+  # cards：默认卡片列表（含公告栏与随机文章轮播）
+  # list：紧凑列表（电脑端单列时左栏站点信息/公告/标签 + 右栏文章；双列时无侧栏；不显示顶部公告栏）
+  # timeline：居中时间线，文章左右交替；不显示公告栏与随机文章
+  # layout：关闭随机时使用的固定布局；layouts 未设置时的后备
+  # layouts：首页布局候选池（cards / list / timeline）（不建议使用）
+  # layoutRandom：是否启用随机（仅电脑端；移动端固定使用 layout） （不建议使用）
+  # layouts 含 2 项及以上：电脑端在布局变体间随机
+  # layouts 仅含 list 时：电脑端在 list 单列/双列间随机
+  # layoutRandom = false 时：固定使用 layout 与 desktopListColumns
+  # mobileCardsLayout：cards / list 模式下手机端文章列表样式（仅 max-width: 768px 生效）
+  # stack — 竖向卡片（cards 模式默认；list 模式下可显式设为 stack 以覆盖默认 list）
+  # list  — 列表样式：隐藏公告栏与随机文章
+  # single — 单列（默认）
+  # double — 双列
+  
+  
+  [params.home]
+    layout = 'list'   # （cards，list，timeline）建议不要使用时间线模式，即timeline，不成熟样式
+    desktopListColumns = 'single' # （single，double）list模式下单双列样式切换在此配置
+    desktopListItemStyle = 'cards' # layout=list时，single模式下选择文章列表为list/cards样式
+    mobileCardsLayout = 'list'     #移动端样式设置（list、stack）注意桌面端cards和list模式下移动端布局略有区别，具体自行切换查看和体验
+    mobileCardsBatchSize = 9  # 每页文章数，这个和上一个配置都是桌面移动端通用的，只是名字没改而已
+    # timelineBatchSize = 10   # 时间线模式：首屏条数及每次滚动加载条数
+    
+    # 下列配置在list模式下生效，不建议更改
+    archiveHeatmapColumns = 13  # 右侧归档热力图：每行列数
+    archiveHeatmapRows = 4      # 右侧归档热力图：行数（格子总数 = 列数 × 行数）
+    randomSidebarCount = 7      # 右侧随机文章显示篇数，不建议过多
+    
+    # 下方配置不建议动，过大会影响网页性能
+    featuredCount = 4           # list 模式推荐区同时可见卡片数
+    featuredPoolCount = 12      # list 模式推荐区候选池（排序后取前 N 篇 SSR，供切换按钮轮换）
+    mobileNoticeTicker = true   # 移动端单行滚动公告
+    featuredDesktop = true      # 电脑端推荐文章区
+    featuredMobile = true       # 移动端推荐文章区
+    
+  [params.notice]
+    title = '公告栏'
+    rotateInterval = 5000  # 左侧随机文章轮播间隔（毫秒）
+    [[params.notice.sections]]
+      label = '--- 欢迎 ---'
+      lines = ['这是 QuinC 的博客', '备用域名quinc.cn']
+    [[params.notice.sections]]
+      label = '--- 关于本站 ---'
+      lines = ['使用 Hugo + aiovtue 主题搭建']
+
+  # --- 侧栏 / Hero 社交图标（icon 为 Iconify 图标名）---
+  [[params.social]]
+    name = 'RSS'
+    link = '/index.xml'  # Hugo 默认 RSS 路径
+    icon = 'ri:rss-line'
+    color = 'orange'
+  [[params.social]]
+    name = 'GitHub'
+    link = 'https://github.com/Congitech'
+    icon = 'ri:github-line'
+    color = '#6e5494'
+  [[params.social]]
+    name = '微信公众号'
+    link = '/hero/port.jpg'
+    icon = 'ri:wechat-2-line'
+    color = '#1AAD19'
+  [[params.social]]
+    name = 'E-Mail'
+    link = 'mailto:50515392@qq.com'
+    icon = 'ri:mail-line'
+    color = '#8E71C1'
+  [[params.social]]
+    name = 'Travelling'
+    link = 'https://www.travellings.cn/go.html'
+    icon = 'ri:train-line'
+    color = '#8cb1b3'
+
+  # --- 归档 / 标签页 ECharts 图表 ---
+  [params.charts]
+    archivesStartMonth = '2026-11'   # 归档图起始月份
+    tagsChartLength = 10             # 标签图显示 Top N
+
+  # --- 文章页底部赞助按钮 ---
+  [params.sponsor]
+    enable = false
+    title = '我很可爱，请给我钱！'
+    description = '我很可爱哦，可以给我点钱钱嘛~'
+    [[params.sponsor.methods]]
+      name = '支付宝'
+      url = '/img/zfb.png'
+      color = '#00A3EE'
+    [[params.sponsor.methods]]
+      name = '微信支付'
+      url = '/img/weix.png'
+      color = '#2DC100'
+
+  # --- 文章版权声明（CC 协议）---
+  [params.license]
+    enable = true
+    type = 'by-nc-sa'      # CC 类型：by / by-nc / by-nc-sa / zero 等
+    language = 'zh'
+    
+  # --- 动态手写签名（signature-inline）---
+  # postCopyrightEnable：文章底部版权声明处的签名动画
+  # footerEnable：全站页脚 copyright 区「by xxx」处的签名动画（关闭后显示 author.name 文字）
+  # 不影响正文 Markdown 中 [签名](signature:) 的签名效果
+  [params.signature]
+    postCopyrightEnable = false
+    footerEnable = false
+
+  # --- 文章页脚导航 ---
+  [params.postFooter]
+    navigationMerge = true # 合并上一篇/下一篇导航样式
+
+  # --- 评论系统（文章 / 友链 / 留言页共用）---
+  # provider 可选：waline | twikoo
+  # 单篇文章可在 front matter 写 comment: false 关闭评论区
+  [params.comment]
+    provider = 'twikoo'
+
+  # --- Waline 评论（https://waline.js.org/）---
+  # 仅当 params.comment.provider = waline 时生效；当前使用 twikoo，此处留作切换备用
+  [params.waline]
+    serverURL = 'https://your-waline-url'                                # 切换到 waline 时填写服务端地址（末尾不要加 /）
+    placeholder = '分享你的想法...'
+
+  # --- Twikoo 评论（仅当 params.comment.provider = twikoo 时生效）---
+  # 留空 envId 时评论区显示配置提示，不影响站点其它功能
+  # visitorEnable：文章访问量统计（需 provider=twikoo 且已配置 envId）
+  # COMMENT_PLACEHOLDER 请在 Twikoo 管理后台「配置」中设置
+  [params.twikoo]
+    envId = 'https://quinc-twikoo.netlify.app/.netlify/functions/twikoo'
+    visitorEnable = true   # 开启文章访问数量统计，基于twikoo
+
+  # --- 留言页信封动画图片（文件在 static/envelope/）---
+  [params.envelope]
+    before = '/envelope/before.png'
+    after = '/envelope/after.png'
+    cover = '/envelope/s3.png'
+    line = '/envelope/line.png'
+    wrapHeight = 447
+    openHeight = 1050
+    openOffset = -200
+    danmakuOpenBottomTrim = 140   # 信封展开时弹幕区域底部向上缩短（像素）
+
+  # --- 顶栏标题 ---
+  [params.navbar]
+    titleParts = ['QuinC-', '神']   # 顶栏主标题分段（可产生动画效果）
+    subTitle = '记录本身即是意义'
+    offset = 0
+
+    # 移动端下滑隐藏顶栏（默认首页不生效，设 includeHome = true 则全站含首页生效）
+    [params.navbar.mobileCollapse]
+      enable = true
+      includeHome = false    # 是否包括主页
+      scrollThreshold = 5   # 滚动超过该距离后才允许隐藏（px）
+      scrollDelta = 10        # 单次滑动超过该值触发隐藏/恢复（px）
+      revealMode = 'scrollUp' # 隐藏后如何恢复：top = 回到顶部才显示 | scrollUp = 上划即显示
+
+    # 电脑端下滑隐藏顶栏（min-width: 769px；默认关闭）
+    [params.navbar.desktopCollapse]
+      enable = true
+      includeHome = false   # 是否包括主页
+      scrollThreshold = 5
+      scrollDelta = 5
+      revealMode = 'scrollUp'
+
+    # 顶栏随页面滚出视口（与自动隐藏互斥：对应端开启 collapse 时无效）
+    [params.navbar.scrollWithPage]
+      enable = false       # true = 内页顶栏随页面滚出视口；false = 全站 fixed 顶栏
+      includeHome = false # false = 首页保持 fixed + Hero 全屏；true = 首页也随页滚动（透明顶栏叠层）
+
+  # --- 全文搜索（Fuse.js）---
+  [params.search]
+    enable = true
+    threshold = 0.35       # 匹配灵敏度（越小越严格）
+
+  # --- 顶栏 / 侧栏导航菜单 ---
+  # weight 越小越靠前；带 items 的项会展开子菜单
+  [[params.menu.main]]
+    name = '首页'
+    url = '/'
+    icon = 'ant-design:home-filled'
+    weight = 1
+  [[params.menu.main]]
+    name = '文章'
+    url = '/categories/'
+    icon = 'ant-design:read-filled'
+    navGroup = 'posts'
+    weight = 2
+    [[params.menu.main.items]]
+      name = '分类'
+      url = '/categories/'
+      icon = 'ant-design:appstore-filled'
+    [[params.menu.main.items]]
+      name = '归档'
+      url = '/archives/'
+      icon = 'ant-design:container-filled'
+    [[params.menu.main.items]]
+      name = '标签'
+      url = '/tags/'
+      icon = 'ant-design:tags-filled'
+  [[params.menu.main]]
+    name = '个人'
+    url = '/moments/'
+    icon = 'ant-design:user-outlined'
+    navGroup = 'personal'
+    weight = 3
+    [[params.menu.main.items]]
+      name = '相册'
+      url = '/gallery/'
+      icon = 'ant-design:picture-filled'
+    [[params.menu.main.items]]
+      name = '动态'
+      url = '/moments/'
+      icon = 'ant-design:compass-filled'
+    [[params.menu.main.items]]
+      name = '追番'
+      url = '/bangumi/'
+      icon = 'mdi:television-play'
+  [[params.menu.main]]
+    name = '留言'
+    url = '/comment/'
+    icon = 'ant-design:message-filled'
+    weight = 4
+  [[params.menu.main]]
+    name = '友链'
+    url = '/links/'
+    icon = 'ant-design:global-outlined'
+    weight = 5
+  [[params.menu.main]]
+    name = '关于'
+    url = '/about/'
+    icon = 'ant-design:idcard-filled'
+    weight = 6
+
+# --- 音乐播放器（APlayer + Meting.js）---
+  # enable：是否显示播放器；单页可在 front matter 写 musicPlayer: false 关闭
+  [params.music]
+    enable = true
+    position = 'right'        # left | right，按钮默认停靠左下或右下
+
+    # apis：按顺序尝试，前一个不可用时自动切换下一个
+    # 现在用本地歌单：文件在 static/music/playlist.json（APlayer 格式，字段名 name/artist/url/cover/lrc）
+    # 想回退到网易云：把下面 3 行 meting 地址取消注释，排在本地路径之后即可
+    apis = [
+      '/music/playlist.json',
+      # 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&r=:r',
+      # 'https://api.injahow.cn/meting/?server=:server&type=:type&id=:id',
+      # 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id',
+    ]
+    server = 'netease'
+    type = 'playlist'                             # playlist | song | album | artist
+    id = '2580064383'                             # 网易云歌单/歌曲 ID（本地歌单模式下不使用）
+
+  # --- Live2D 看板娘（左下角 Live2D 角色）---
+  # enable：是否启用；单页可在 front matter 写 live2d: false 关闭
+  [params.live2d]
+    enable = true
+    minWidth = 768                                # 低于此宽度不加载
+    drag = false
+    tools = ['hitokoto', 'asteroids', 'switch-model', 'switch-texture', 'photo', 'info', 'quit']
+
+    # 看板娘运行时（脚本 / 样式 / 提示语，一般保持默认即可）
+    widget = 'https://live2d.kafuchino.top/'
+    waifuTips = 'jsdelivr/sequential/waifu-tips.js'
+    waifuCss = 'css/left.css'
+    waifuTipsJson = 'waifu-tips.json'
+
+    # 模型库 cdnPath（静态模型目录，含 model_list.json）— 与 apiPath 二选一
+    cdnPath = 'https://live2d.kafuchino.top/'     # nova1751 扩展库：少女前线等（21 组模型）
+    # 备用模型库（取消注释一行替换上方 cdnPath 即可切换模型种类）：
+    # cdnPath = 'https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/'   # fghrsh 经典库：Shizuku / 海王星 / Pio 等（7 组）
+    # cdnPath = 'https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/'      # 同上 · jsDelivr 国内节点
+    # cdnPath = 'https://fastly.jsdelivr.net/gh/nova1751/live2d-api/' # nova1751 仓库镜像（模型集与 kafuchino 相同）
+    #
+    # 模型库 apiPath（fghrsh 动态 PHP 接口；启用时需注释掉上方 cdnPath）：
+    # apiPath = 'https://live2d.fghrsh.net/api/'                      # fghrsh 官方动态 API（接口式换模型/皮肤）
+
+  # --- 团团猫动态鼠标指针 ---
+  # enable：是否启用；单页可在 front matter 写 mouse: false 关闭
+  [params.mouse]
+    enable = true
+    path = '/mouse/tuantuanma/'                  # 预压缩 WebP + manifest.json（见 static/mouse/tuantuanma/）
+    scale = 0.25                                  # manifest 内记录的缩放；重新压缩时改 compress-mouse 脚本参数
+
+  # --- 全站背景特效（yzhanWeather · MIT，本地静态资源）---
+  # enable：是否启用；单页可在 front matter 写 effects: false 关闭
+  # type：sakura | rain | snow | firefly | butterfly | random（每次打开随机一种）
+  # mobile：触摸设备或宽度 ≤768px 是否启用（默认 false）
+  # randomize：打散雨/樱花/雪/蝴蝶轨迹；萤火虫不受此项影响，始终仅向上飘
+  [params.effects]
+    enable = true
+    type = 'firefly'
+    randomTypes = ['sakura', 'rain', 'snow', 'firefly', 'butterfly']
+    randomize = true                                # 打散位置/速度/轨迹，避免过于规律
+    mobile = false                                  # 移动端是否启用（默认关闭）
+    maxDuration = 10                                # 动画基准周期（秒），越大越慢
+    zIndex = 5                                      # 层级，需低于弹窗/导航
+    script = '/vendor/yzhanweather/yzhanweather.min.js'
+
+  # --- 站内无刷新跳转（PJAX）---
+  [params.pjax]
+    enable = true
+    fadeDuration = 200                            # 内容区淡入淡出时长（毫秒）
+    mountDelay = 120                              # 页内跳转：CSS/JS 就绪后额外等待（毫秒），减少布局突变

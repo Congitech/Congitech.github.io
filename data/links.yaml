@@ -1,0 +1,19 @@
+# =============================================================================
+# 友链数据（友链页 /links/ 读取此文件）
+# 页面壳子在 content/links.md，卡片内容在此维护
+# =============================================================================
+
+title: 来加入我们叭
+cover: "/hero/bg-01-s1.jpg"
+
+# shuffleGroups：是否打乱分组顺序
+shuffleGroups: false
+
+# linkGroups：友链分组，可增删组；每组 links 为友链卡片列表
+#   type: preview（卡片截图）| simple（长条头像）
+linkGroups:
+  - name: 朋友们
+    desc: 欢迎交换友链，来者不拒
+    type: simple
+    shuffle: false
+    links: []
