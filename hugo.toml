@@ -465,8 +465,8 @@ enableRobotsTXT = true     # 生成 robots.txt（模板在 themes/aiovtue/layout
   # enable：是否启用；单页可在 front matter 写 mouse: false 关闭
   [params.mouse]
     enable = true
-    path = '/mouse/tuantuanma/'                  # 预压缩 WebP + manifest.json（见 static/mouse/tuantuanma/）
-    scale = 0.25                                  # manifest 内记录的缩放；重新压缩时改 compress-mouse 脚本参数
+    path = '/mouse/yinlang/'                      # 银狼动画光标（由 银狼/*.ani 转换生成，见 static/mouse/yinlang/）
+    scale = 1                                     # 原生 48px，像素画不做缩放
 
   # --- 全站背景特效（yzhanWeather · MIT，本地静态资源）---
   # enable：是否启用；单页可在 front matter 写 effects: false 关闭

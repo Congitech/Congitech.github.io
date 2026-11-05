@@ -1,0 +1,1058 @@
+{
+  "version": 1,
+  "scale": 1.0,
+  "rules": [
+    {
+      "name": "tuantuanma-pointer",
+      "selector": "html, body",
+      "hover": false,
+      "priority": 0,
+      "duration": 2733,
+      "keyframes": [
+        {
+          "file": "arrow/00.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "arrow/01.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            6.0976
+          ]
+        },
+        {
+          "file": "arrow/02.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            12.1951
+          ]
+        },
+        {
+          "file": "arrow/03.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            18.2927
+          ]
+        },
+        {
+          "file": "arrow/04.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            24.3902
+          ]
+        },
+        {
+          "file": "arrow/05.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            30.4878
+          ]
+        },
+        {
+          "file": "arrow/06.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            36.5854
+          ]
+        },
+        {
+          "file": "arrow/07.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            42.6829
+          ]
+        },
+        {
+          "file": "arrow/08.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            48.7805
+          ]
+        },
+        {
+          "file": "arrow/09.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            54.878
+          ]
+        },
+        {
+          "file": "arrow/10.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            60.9756
+          ]
+        },
+        {
+          "file": "arrow/11.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            67.0732
+          ]
+        },
+        {
+          "file": "arrow/12.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            73.1707
+          ]
+        },
+        {
+          "file": "arrow/13.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            79.2683
+          ]
+        },
+        {
+          "file": "arrow/14.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            85.3659
+          ]
+        },
+        {
+          "file": "arrow/15.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            91.4634
+          ]
+        },
+        {
+          "file": "arrow/16.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            93.9024
+          ]
+        },
+        {
+          "file": "arrow/17.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            97.561
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-link",
+      "selector": "a, button, summary, label[for], select, [role=\"button\"], [role=\"link\"], .mouse-pointer, .music-btn, .live2d-tool, input[type=\"button\"], input[type=\"submit\"], input[type=\"reset\"], .cursor-pointer",
+      "hover": false,
+      "priority": 1,
+      "duration": 2733,
+      "keyframes": [
+        {
+          "file": "link/00.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "link/01.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            6.0976
+          ]
+        },
+        {
+          "file": "link/02.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            12.1951
+          ]
+        },
+        {
+          "file": "link/03.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            18.2927
+          ]
+        },
+        {
+          "file": "link/04.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            24.3902
+          ]
+        },
+        {
+          "file": "link/05.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            30.4878
+          ]
+        },
+        {
+          "file": "link/06.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            36.5854
+          ]
+        },
+        {
+          "file": "link/07.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            42.6829
+          ]
+        },
+        {
+          "file": "link/08.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            48.7805
+          ]
+        },
+        {
+          "file": "link/09.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            54.878
+          ]
+        },
+        {
+          "file": "link/10.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            60.9756
+          ]
+        },
+        {
+          "file": "link/11.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            67.0732
+          ]
+        },
+        {
+          "file": "link/12.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            73.1707
+          ]
+        },
+        {
+          "file": "link/13.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            79.2683
+          ]
+        },
+        {
+          "file": "link/14.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            85.3659
+          ]
+        },
+        {
+          "file": "link/15.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            91.4634
+          ]
+        },
+        {
+          "file": "link/16.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            93.9024
+          ]
+        },
+        {
+          "file": "link/17.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            97.561
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-text",
+      "selector": "input:not([type=\"checkbox\"]):not([type=\"radio\"]):not([type=\"range\"]):not([type=\"button\"]):not([type=\"submit\"]):not([type=\"reset\"]), textarea, [contenteditable=\"true\"]",
+      "hover": false,
+      "priority": 2,
+      "duration": 2500,
+      "keyframes": [
+        {
+          "file": "beam/00.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "beam/01.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            6.6667
+          ]
+        },
+        {
+          "file": "beam/02.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            13.3333
+          ]
+        },
+        {
+          "file": "beam/03.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            20.0
+          ]
+        },
+        {
+          "file": "beam/04.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            26.6667
+          ]
+        },
+        {
+          "file": "beam/05.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            33.3333
+          ]
+        },
+        {
+          "file": "beam/06.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            40.0
+          ]
+        },
+        {
+          "file": "beam/07.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            46.6667
+          ]
+        },
+        {
+          "file": "beam/08.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            53.3333
+          ]
+        },
+        {
+          "file": "beam/09.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            60.0
+          ]
+        },
+        {
+          "file": "beam/10.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            66.6667
+          ]
+        },
+        {
+          "file": "beam/11.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            73.3333
+          ]
+        },
+        {
+          "file": "beam/12.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            80.0
+          ]
+        },
+        {
+          "file": "beam/13.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            86.6667
+          ]
+        },
+        {
+          "file": "beam/14.webp",
+          "x": 5,
+          "y": 8,
+          "percents": [
+            93.3333
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-busy",
+      "selector": ".mouse-wait, .sakura-loading, .sakura-loading *",
+      "hover": false,
+      "priority": 3,
+      "duration": 1333,
+      "keyframes": [
+        {
+          "file": "busy/00.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "busy/01.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            12.5
+          ]
+        },
+        {
+          "file": "busy/02.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            25.0
+          ]
+        },
+        {
+          "file": "busy/03.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            37.5
+          ]
+        },
+        {
+          "file": "busy/04.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            50.0
+          ]
+        },
+        {
+          "file": "busy/05.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            62.5
+          ]
+        },
+        {
+          "file": "busy/06.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            75.0
+          ]
+        },
+        {
+          "file": "busy/07.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            87.5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-work",
+      "selector": ".mouse-progress, [data-mouse=\"progress\"]",
+      "hover": false,
+      "priority": 4,
+      "duration": 2400,
+      "keyframes": [
+        {
+          "file": "working/00.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "working/01.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            6.9444
+          ]
+        },
+        {
+          "file": "working/02.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            13.8889
+          ]
+        },
+        {
+          "file": "working/03.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            20.8333
+          ]
+        },
+        {
+          "file": "working/04.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            27.7778
+          ]
+        },
+        {
+          "file": "working/05.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            34.7222
+          ]
+        },
+        {
+          "file": "working/06.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            41.6667
+          ]
+        },
+        {
+          "file": "working/07.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            48.6111
+          ]
+        },
+        {
+          "file": "working/08.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            55.5556
+          ]
+        },
+        {
+          "file": "working/09.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            62.5
+          ]
+        },
+        {
+          "file": "working/10.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            69.4444
+          ]
+        },
+        {
+          "file": "working/11.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            76.3889
+          ]
+        },
+        {
+          "file": "working/12.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            83.3333
+          ]
+        },
+        {
+          "file": "working/13.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            86.1111
+          ]
+        },
+        {
+          "file": "working/14.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            90.2778
+          ]
+        },
+        {
+          "file": "working/15.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            93.0556
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-move",
+      "selector": ".mouse-move, [data-mouse=\"move\"]",
+      "hover": false,
+      "priority": 5,
+      "duration": 1000,
+      "keyframes": [
+        {
+          "file": "move/00.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "move/01.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            16.6667
+          ]
+        },
+        {
+          "file": "move/02.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            33.3333
+          ]
+        },
+        {
+          "file": "move/03.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            50.0
+          ]
+        },
+        {
+          "file": "move/04.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            66.6667
+          ]
+        },
+        {
+          "file": "move/05.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            83.3333
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-vert",
+      "selector": ".mouse-ns-resize, [data-mouse=\"ns-resize\"]",
+      "hover": false,
+      "priority": 6,
+      "duration": 1000,
+      "keyframes": [
+        {
+          "file": "ns/00.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "ns/01.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            16.6667
+          ]
+        },
+        {
+          "file": "ns/02.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            33.3333
+          ]
+        },
+        {
+          "file": "ns/03.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            50.0
+          ]
+        },
+        {
+          "file": "ns/04.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            66.6667
+          ]
+        },
+        {
+          "file": "ns/05.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            83.3333
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-horz",
+      "selector": ".mouse-ew-resize, [data-mouse=\"ew-resize\"]",
+      "hover": false,
+      "priority": 7,
+      "duration": 1000,
+      "keyframes": [
+        {
+          "file": "we/00.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "we/01.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            16.6667
+          ]
+        },
+        {
+          "file": "we/02.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            33.3333
+          ]
+        },
+        {
+          "file": "we/03.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            50.0
+          ]
+        },
+        {
+          "file": "we/04.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            66.6667
+          ]
+        },
+        {
+          "file": "we/05.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            83.3333
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-dgn1",
+      "selector": ".mouse-nwse-resize, [data-mouse=\"nwse-resize\"]",
+      "hover": false,
+      "priority": 8,
+      "duration": 1000,
+      "keyframes": [
+        {
+          "file": "nwse/00.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "nwse/01.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            16.6667
+          ]
+        },
+        {
+          "file": "nwse/02.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            33.3333
+          ]
+        },
+        {
+          "file": "nwse/03.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            50.0
+          ]
+        },
+        {
+          "file": "nwse/04.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            66.6667
+          ]
+        },
+        {
+          "file": "nwse/05.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            83.3333
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-dgn2",
+      "selector": ".mouse-nesw-resize, [data-mouse=\"nesw-resize\"]",
+      "hover": false,
+      "priority": 9,
+      "duration": 1000,
+      "keyframes": [
+        {
+          "file": "nesw/00.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "nesw/01.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            16.6667
+          ]
+        },
+        {
+          "file": "nesw/02.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            33.3333
+          ]
+        },
+        {
+          "file": "nesw/03.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            50.0
+          ]
+        },
+        {
+          "file": "nesw/04.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            66.6667
+          ]
+        },
+        {
+          "file": "nesw/05.webp",
+          "x": 23,
+          "y": 23,
+          "percents": [
+            83.3333
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-unavailable",
+      "selector": "[disabled], [aria-disabled=\"true\"], .mouse-not-allowed, [data-mouse=\"not-allowed\"]",
+      "hover": false,
+      "priority": 10,
+      "duration": 1833,
+      "keyframes": [
+        {
+          "file": "no/00.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "no/01.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            9.0909
+          ]
+        },
+        {
+          "file": "no/02.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            18.1818
+          ]
+        },
+        {
+          "file": "no/03.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            27.2727
+          ]
+        },
+        {
+          "file": "no/04.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            36.3636
+          ]
+        },
+        {
+          "file": "no/05.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            45.4545
+          ]
+        },
+        {
+          "file": "no/06.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            54.5455
+          ]
+        },
+        {
+          "file": "no/07.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            63.6364
+          ]
+        },
+        {
+          "file": "no/08.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            72.7273
+          ]
+        },
+        {
+          "file": "no/09.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            81.8182
+          ]
+        },
+        {
+          "file": "no/10.webp",
+          "x": 0,
+          "y": 0,
+          "percents": [
+            90.9091
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tuantuanma-cross",
+      "selector": ".mouse-crosshair, [data-mouse=\"crosshair\"]",
+      "hover": false,
+      "priority": 11,
+      "duration": 1333,
+      "keyframes": [
+        {
+          "file": "cross/00.webp",
+          "x": 9,
+          "y": 9,
+          "percents": [
+            0.0
+          ]
+        },
+        {
+          "file": "cross/01.webp",
+          "x": 9,
+          "y": 9,
+          "percents": [
+            50.0
+          ]
+        }
+      ]
+    }
+  ]
+}
