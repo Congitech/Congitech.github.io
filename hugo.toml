@@ -29,7 +29,7 @@
 # =============================================================================
 
 # 站点正式访问地址（影响 sitemap、RSS、分享链接等绝对 URL，部署前务必与真实域名一致）
-baseURL = 'https://congitech.github.io/'
+baseURL = 'https://quinc.cn/'
 locale = 'zh-cn'
 defaultContentLanguage = 'zh'
 title = 'QuinC'          # 站点名称（浏览器标题、页脚版权等）
@@ -227,7 +227,7 @@ enableRobotsTXT = true     # 生成 robots.txt（模板在 themes/aiovtue/layout
     rotateInterval = 5000  # 左侧随机文章轮播间隔（毫秒）
     [[params.notice.sections]]
       label = '--- 欢迎 ---'
-      lines = ['这是 QuinC 的博客', '备用域名quinc.cn']
+      lines = ['这是 QuinC 的博客', '备用域名 congitech.github.io']
     [[params.notice.sections]]
       label = '--- 关于本站 ---'
       lines = ['使用 Hugo + aiovtue 主题搭建']
