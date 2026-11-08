@@ -6,7 +6,7 @@ description: "以「作业管理系统」靶场为样本,初步了解一句话�
 tags: [ctf, web, WriteUp]
 categories: [web]
 draft: false
-cover: /hero/bg-07-dp.jpg
+cover: /hero/bg-07-gpt.jpg
 ---
 
 # 一句话木马完全指南 —— 以「作业管理系统」靶场为样本
