@@ -1,6 +1,10 @@
 export const TWIKOO_COMMENT_PLACEHOLDER = '分享你的想法...' // Waline 默认提示，Twikoo 使用后台 COMMENT_PLACEHOLDER
 export const WALINE_CLIENT_URL = 'https://unpkg.com/@waline/client@3.15.2/dist/waline.js'
-export const TWIKOO_SCRIPT_URL = '/vendor/twikoo/twikoo.min.js'
+export const TWIKOO_SCRIPT_URL = [
+  '/vendor/twikoo/twikoo.min.js',                                                  // 主：本站自托管
+  'https://fastly.jsdelivr.net/npm/twikoo@1.7.12/dist/twikoo.all.min.js',          // 备 1：jsDelivr Fastly 节点
+  'https://unpkg.com/twikoo@1.7.12/dist/twikoo.all.min.js',                        // 备 2：unpkg
+]
 
 let twikooScriptPromise = null
 let twikooVisitorObserver = null
@@ -309,25 +313,45 @@ export function loadTwikooScript() {
   if (window.twikoo?.init) return Promise.resolve(window.twikoo)
   if (twikooScriptPromise) return twikooScriptPromise
 
-  twikooScriptPromise = new Promise((resolve, reject) => {
-    const existing = document.querySelector(`script[src="${TWIKOO_SCRIPT_URL}"]`)
-    if (existing) {
-      if (window.twikoo?.init) {
-        resolve(window.twikoo)
+  const sources = Array.isArray(TWIKOO_SCRIPT_URL) ? TWIKOO_SCRIPT_URL : [TWIKOO_SCRIPT_URL]
+
+  const inject = (url) =>
+    new Promise((resolve, reject) => {
+      const existing = document.querySelector(`script[src="${url}"]`)
+      if (existing) {
+        if (window.twikoo?.init) {
+          resolve(window.twikoo)
+          return
+        }
+        existing.addEventListener('load', () => resolve(window.twikoo), { once: true })
+        existing.addEventListener('error', () => reject(new Error('twikoo load failed')), { once: true })
         return
       }
-      existing.addEventListener('load', () => resolve(window.twikoo), { once: true })
-      existing.addEventListener('error', () => reject(new Error('twikoo load failed')), { once: true })
-      return
-    }
 
-    const script = document.createElement('script')
-    script.src = TWIKOO_SCRIPT_URL
-    script.defer = true
-    script.onload = () => resolve(window.twikoo)
-    script.onerror = () => reject(new Error('twikoo load failed'))
-    document.body.appendChild(script)
-  })
+      const script = document.createElement('script')
+      script.src = url
+      script.defer = true
+      script.onload = () => resolve(window.twikoo)
+      script.onerror = () => reject(new Error(`twikoo load failed: ${url}`))
+      document.body.appendChild(script)
+    })
+
+  twikooScriptPromise = (async () => {
+    let lastError = null
+    for (const url of sources) {
+      try {
+        const loaded = await inject(url)
+        if (loaded?.init) return loaded
+        if (window.twikoo?.init) return window.twikoo
+        lastError = new Error(`twikoo global missing after ${url}`)
+      } catch (err) {
+        lastError = err
+        console.warn('[comments] twikoo 源不可用，尝试下一个:', url)
+      }
+    }
+    twikooScriptPromise = null
+    throw lastError || new Error('twikoo load failed')
+  })()
 
   return twikooScriptPromise
 }
